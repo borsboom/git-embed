@@ -2,12 +2,12 @@
 
 -- | Use Template Haskell to embed Git revision, branch, and tag information.
 --
--- Also adds dependent files so that changes to git refs cause a rebuild.
+-- Also adds dependent files so that changes to Git refs cause a rebuild.
 --
 -- Example:
 --
 -- > {-# LANGUAGE TemplateHaskell #-}
--- > import Data.GitEmbed
+-- > import Git.Embed
 -- >
 -- > main :: IO ()
 -- > main = putStrLn ("Git revision: " ++ gitRev ++ ", branch: " ++ gitBranch)
@@ -17,7 +17,7 @@
 -- >
 -- > gitBranch :: String
 -- > gitBranch = $(embedGitBranch)
-module Data.GitEmbed
+module Git.Embed
     ( embedGitRevision
     , embedGitShortRevision
     , embedGitBranch
